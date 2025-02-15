@@ -1,0 +1,17 @@
+export const currencies = [
+    { code: 'TRY', name: 'Turkish Lira' },
+    { code: 'USD', name: 'US Dollar' },
+    { code: 'EUR', name: 'Euro' },
+    { code: 'GBP', name: 'British Pound' },
+    { code: 'ZAR', name: 'South African Rand' },
+    { code: 'NGN', name: 'Nigerian Naira' },
+    { code: 'KES', name: 'Kenyan Shilling' },
+    { code: 'EGP', name: 'Egyptian Pound' },
+    { code: 'GHS', name: 'Ghanaian Cedi' },
+    { code: 'MAD', name: 'Moroccan Dirham' },
+    { code: 'XOF', name: 'West African CFA Franc' },
+    { code: 'XAF', name: 'Central African CFA Franc' },
+    { code: 'UGX', name: 'Ugandan Shilling' },
+    { code: 'TZS', name: 'Tanzanian Shilling' },
+    { code: 'RWF', name: 'Rwandan Franc' },
+]; 
