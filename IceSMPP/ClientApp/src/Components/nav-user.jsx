@@ -71,22 +71,17 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem asChild>
-                <Link href={route('profile.edit')} className="flex items-center">
+                <Link href='/auth/profile' className="flex items-center">
                   <User className="mr-2 size-4" />
                   Profile
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/settings" className="flex items-center">
-                  <Settings className="mr-2 size-4" />
-                  Settings
-                </Link>
-              </DropdownMenuItem>
+            
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
               <Link 
-                href={route('logout')} 
+                href="/auth/logout"
                 method="post" 
                 as="button"
                 className="flex w-full items-center"

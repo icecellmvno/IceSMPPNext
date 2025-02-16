@@ -9,25 +9,25 @@ import GuestLayout from '@/Layouts/GuestLayout';
 export default function Login({ status, canResetPassword }) {
     const [showTwoFactor, setShowTwoFactor] = useState(false);
     const { data, setData, post, processing, errors, reset } = useForm({
-        login: '',
-        password: '',
-        remember: false,
-        code: '',
+        Identity: '',
+        Password: '',
+        Remember: false,
+        Code: '',
     });
 
     const submit = (e) => {
         e.preventDefault();
 
-        post(route(showTwoFactor ? 'two-factor.login' : 'login'), {
+        post(showTwoFactor ? '/auth/twofactor' : '/auth/Login', {
             onSuccess: (response) => {
                 if (response?.props?.requiresTwoFactor) {
                     setShowTwoFactor(true);
-                    reset('password');
+                    reset('Password');
                 }
             },
             onFinish: () => {
                 if (!showTwoFactor) {
-                    reset('password');
+                    reset('Password');
                 }
             },
         });
@@ -61,33 +61,33 @@ export default function Login({ status, canResetPassword }) {
                             {!showTwoFactor ? (
                                 <>
                                     <div className="grid gap-2">
-                                        <Label htmlFor="login">Username or Email</Label>
+                                        <Label htmlFor="Identity">Username or Email</Label>
                                         <Input
-                                            id="login"
+                                            id="Identity"
                                             type="text"
                                             placeholder="m@example.com"
-                                            name="login"
-                                            value={data.login}
+                                            name="Identity"
+                                            value={data.Identity}
                                             autoComplete="username"
-                                            onChange={(e) => setData('login', e.target.value)}
+                                            onChange={(e) => setData('Identity', e.target.value)}
                                         />
-                                        {errors.login && (
-                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.login}</p>
+                                        {errors.Identity && (
+                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.Identity}</p>
                                         )}
                                     </div>
 
                                     <div className="grid gap-2">
-                                        <Label htmlFor="password">Password</Label>
+                                        <Label htmlFor="Password">Password</Label>
                                         <Input
-                                            id="password"
-                                            type="password"
-                                            name="password"
-                                            value={data.password}
+                                            id="Password"
+                                            type="Password"
+                                            name="Password"
+                                            value={data.Password}
                                             autoComplete="current-password"
-                                            onChange={(e) => setData('password', e.target.value)}
+                                            onChange={(e) => setData('Password', e.target.value)}
                                         />
-                                        {errors.password && (
-                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.password}</p>
+                                        {errors.Password && (
+                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.Password}</p>
                                         )}
                                     </div>
 
@@ -95,7 +95,7 @@ export default function Login({ status, canResetPassword }) {
                                         <Checkbox
                                             id="remember"
                                             checked={data.remember}
-                                            onCheckedChange={(checked) => setData('remember', checked)}
+                                            onCheckedChange={(checked) => setData('Remember', checked)}
                                         />
                                         <label
                                             htmlFor="remember"

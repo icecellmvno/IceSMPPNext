@@ -31,7 +31,7 @@ export default function AuthenticatedLayout({ header, children }) {
                         <Breadcrumb>
                             <BreadcrumbList>
                                 <BreadcrumbItem>
-                                    <BreadcrumbLink href={route('dashboard')} className="text-sm text-muted-foreground hover:text-foreground">
+                                    <BreadcrumbLink href="/" className="text-sm text-muted-foreground hover:text-foreground">
                                         Dashboard
                                     </BreadcrumbLink>
                                 </BreadcrumbItem>

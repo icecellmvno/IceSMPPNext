@@ -42,7 +42,7 @@ export default function Index({ auth, customers }) {
                                 </CardDescription>
                             </div>
                             <Button asChild>
-                                <Link href={route('customers.create')}>
+                                <Link href="/customers/create">
                                     <Plus className="mr-2 h-4 w-4" />
                                     Add Customer
                                 </Link>

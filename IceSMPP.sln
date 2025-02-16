@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceSMPP", "IceSMPP\IceSMPP.csproj", "{46B29D50-BF4E-46EA-A2C6-3905B3ECBEC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inetlab.SMPP", "Inetlab.SMPP\Inetlab.SMPP.csproj", "{3C93BD87-7BC1-42AA-9B50-A46F1BF160A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceSMPP", "IceSMPP\IceSMPP.csproj", "{BB3488D2-7385-4883-A90C-CDE7BCDAFF70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46B29D50-BF4E-46EA-A2C6-3905B3ECBEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46B29D50-BF4E-46EA-A2C6-3905B3ECBEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46B29D50-BF4E-46EA-A2C6-3905B3ECBEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46B29D50-BF4E-46EA-A2C6-3905B3ECBEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C93BD87-7BC1-42AA-9B50-A46F1BF160A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C93BD87-7BC1-42AA-9B50-A46F1BF160A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C93BD87-7BC1-42AA-9B50-A46F1BF160A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C93BD87-7BC1-42AA-9B50-A46F1BF160A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3488D2-7385-4883-A90C-CDE7BCDAFF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3488D2-7385-4883-A90C-CDE7BCDAFF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3488D2-7385-4883-A90C-CDE7BCDAFF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3488D2-7385-4883-A90C-CDE7BCDAFF70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

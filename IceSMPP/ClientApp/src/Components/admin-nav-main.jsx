@@ -18,12 +18,12 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
-export function NavMain({
+export function AdminNavMain({
   items
 }) {
   return (
     (<SidebarGroup>
-      <SidebarGroupLabel>SMS Platform</SidebarGroupLabel>
+      <SidebarGroupLabel>Admin Tools</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible

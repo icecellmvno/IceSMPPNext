@@ -6,7 +6,7 @@ import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ThemeProvider } from './Components/theme-provider';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'IceSMPP';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -23,6 +23,9 @@ createInertiaApp({
                 <App {...props} />
             </ThemeProvider>
         );
+    },
+    mixin:{
+        
     },
     progress: {
         color: '#4B5563',

@@ -9,21 +9,21 @@ const outDir = "../wwwroot/build";
 mkdirSync(outDir, { recursive: true });
 
 export default defineConfig({
-  plugins: [
-    laravel({
-      input: ["src/App.jsx"],
-      publicDirectory: outDir,
-      refresh: true,
-    }),
-    react(),
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
+    plugins: [
+        laravel({
+            input: ["src/App.jsx"],
+            publicDirectory: outDir,
+            refresh: true,
+        }),
+        react(),
+    ],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
+        },
     },
-  },
-  build: {
-    outDir,
-    emptyOutDir: true,
-  },
+    build: {
+        outDir,
+        emptyOutDir: true,
+    },
 });
