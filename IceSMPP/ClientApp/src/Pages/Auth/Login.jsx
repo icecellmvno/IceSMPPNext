@@ -2,19 +2,20 @@ import { Button } from '@/Components/ui/button';
 import { Input } from '@/Components/ui/input';
 import { Label } from '@/Components/ui/label';
 import { Checkbox } from '@/Components/ui/checkbox';
-import { Head, Link, useForm } from '@inertiajs/react';
+import {Head, Link, useForm, usePage} from '@inertiajs/react';
 import { useState } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
 
 export default function Login({ status, canResetPassword }) {
     const [showTwoFactor, setShowTwoFactor] = useState(false);
-    const { data, setData, post, processing, errors, reset } = useForm({
+    const { data, setData, post, processing, reset } = useForm({
         Identity: '',
         Password: '',
         Remember: false,
         Code: '',
     });
-
+    const { errors } = usePage().props;
+    console.log(errors);
     const submit = (e) => {
         e.preventDefault();
 
@@ -36,7 +37,9 @@ export default function Login({ status, canResetPassword }) {
     return (
         <GuestLayout>
             <Head title={showTwoFactor ? "Two Factor Authentication" : "Log in"} />
-
+            {errors.message && (
+                <p className="text-sm text-red-600 dark:text-red-400">{errors.message}</p>
+            )}
             <div className="lg:p-8">
                 <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
                     <div className="flex flex-col space-y-2 text-center">
@@ -71,8 +74,8 @@ export default function Login({ status, canResetPassword }) {
                                             autoComplete="username"
                                             onChange={(e) => setData('Identity', e.target.value)}
                                         />
-                                        {errors.Identity && (
-                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.Identity}</p>
+                                        {errors.identity && (
+                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.identity}</p>
                                         )}
                                     </div>
 
@@ -86,8 +89,8 @@ export default function Login({ status, canResetPassword }) {
                                             autoComplete="current-password"
                                             onChange={(e) => setData('Password', e.target.value)}
                                         />
-                                        {errors.Password && (
-                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.Password}</p>
+                                        {errors.password && (
+                                            <p className="text-sm text-red-600 dark:text-red-400">{errors.password}</p>
                                         )}
                                     </div>
 
